@@ -19,6 +19,10 @@ Gunakan kredensial berikut untuk login:
 - **Username**: goriorio28
 - **Password**: 282828
 
+## Cara Menjalankan
+
+1. Buka browser dan akses: `http://localhost/PHP_Dasar/Tugas%205/`.
+   
 ## Dokumentasi
 
 ## 📸 Dokumentasi
