@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    overflow: hidden;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--green);
+  height: 0.5rem;
+  border-radius: 12px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -12px;
+  background-color: var(--black);
+  border: 1px solid oklch(38% 0 0);
+  border-radius: 8px;
+  height: 2rem;
+  width: 1.25rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--green);
+  height: 0.5rem;
+  border-radius: 12px;
+}
+
+[letter-animation="breath"] > span {
+  display: inline-block;
+  white-space: break-spaces;
+  animation: breath var(--speed) ease calc(var(--index, 0) * 100ms) infinite alternate;
+}
+
+@keyframes breath {
+  from {
+    animation-timing-function: ease-out;
+  }
+  to {
+    transform: scale(1.25) translateY(-5px) perspective(1px);
+    text-shadow: 0 0 20px var(--really-green);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -12px;
+  background-color: var(--black);
+  border: 1px solid oklch(38% 0 0);
+  border-radius: 8px;
+  height: 2rem;
+  width: 1.25rem;
+}
+
+/* Bintang-bintang */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+/* Roket animasi latar belakang */
+.rocket-background {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    width: 50px;
+    height: 100px;
+    background: gray;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    animation: rocketBackground 10s infinite linear;
+    z-index: 0;
+}
+
+.rocket-background::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 10px;
+    height: 20px;
+    background: orange;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: flame 0.5s infinite alternate;
+}
+
+@keyframes rocketBackground {
+    0% { transform: translateY(100vh) translateX(-50%); }
+    100% { transform: translateY(-200px) translateX(-50%); }
+}
+
+@keyframes flame {
+    0% { height: 20px; opacity: 1; }
+    100% { height: 10px; opacity: 0.5; }
+}
+
+/* Fade-in animasi */
+.fade-in {
+    animation: fadeInUp 1s ease-in-out both;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translate3d(0, 40px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+/* Kontainer */
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: rgba(249, 224, 1, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    z-index: 1;
+    position: relative;
+}
+
+/* Header */
+.header {
+    text-align: center;
+}
+.header img {
+    width: 100px;
+    border-radius: 8px;
+    margin-top: 10px;
+    filter: contrast(110%) brightness(110%);
+}
+
+/* Form */
+form {
+    margin-top: 20px;
+}
+input[type=text], input[type=password] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Tombol */
+input[type=submit] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+input[type=submit]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* To-do list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    padding: 8px;
+    margin-bottom: 6px;
+    background: #e9ecef;
+    border-radius: 5px;
+}
+.done {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Tautan */
+a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #007BFF;
+}
+a.logout {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: red;
+}
+
+/* Notifikasi */
+.error {
+    color: red;
+    text-align: center;
+}
+.success {
+    color: green;
+    text-align: center;
+}
+/* Animasi teks bernafas */
+.breathing-text span {
+    display: inline-block;
+    animation: breath var(--speed) ease infinite alternate;
+}
+
+.breathing-text span:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.breathing-text span:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+/* Hapus animasi roket */
+.rocket-background {
+    display: none;
+}
+
+/* Animasi bintang jatuh */
+.falling-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: fallingStar 3s linear infinite;
+}
+
+@keyframes fallingStar {
+    0% {
+        transform: translateY(-10px) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(-50px);
+        opacity: 0;
+    }
+}
